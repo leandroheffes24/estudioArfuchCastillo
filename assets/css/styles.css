@@ -1165,6 +1165,24 @@ p { text-wrap: pretty; }
 .dato__valor { font-size: var(--t-menor); line-height: 1.6; color: var(--fondo); }
 .dato__nota { font-size: var(--t-micro); line-height: 1.55; color: rgba(252, 252, 251, .62); }
 
+/* Horarios: el turno partido se lee mejor como pares día/horario que como
+   un renglón corrido. */
+.horarios { display: grid; gap: .625rem; }
+.horarios > div { display: grid; gap: .0625rem; }
+.horarios dt {
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(252, 252, 251, .58);
+}
+.horarios dd {
+  margin: 0;
+  font-size: var(--t-menor);
+  line-height: 1.5;
+  color: var(--fondo);
+}
+
 .enlace-mapa {
   display: inline-flex;
   align-items: center;
@@ -1275,19 +1293,6 @@ p { text-wrap: pretty; }
 .pie__contacto a:hover { color: var(--acento-claro); }
 .pie__contacto a:focus-visible { outline-color: var(--acento-claro); }
 .pie__tel { font-weight: 700; color: var(--fondo); }
-
-.pie__redes { display: flex; gap: .5rem; }
-.pie__redes a {
-  display: grid;
-  place-items: center;
-  width: 2.75rem; height: 2.75rem;
-  border: 1px solid var(--linea-clara);
-  border-radius: var(--radio);
-  color: var(--fondo);
-  transition: background-color var(--transicion), border-color var(--transicion);
-}
-.pie__redes a:hover { background: var(--acento); border-color: var(--acento); }
-.pie__redes svg { width: 1.25rem; height: 1.25rem; }
 
 .pie__base { border-top: 1px solid var(--linea-clara); }
 .pie__base-interior {

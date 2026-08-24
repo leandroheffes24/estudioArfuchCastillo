@@ -19,8 +19,11 @@
         +5492215756941   → formato tel: y schema
         5492215756941    → formato wa.me
 
+     DIRECCIÓN — ya cargada: Calle 13 B N° 908, City Bell, La Plata
+        Aparece en 6 lugares: este comentario, el JSON-LD, la sección de
+        contacto, el enlace "Cómo llegar", el mapa diferido y el pie.
+
      ⚠ DATOS QUE TODAVÍA FALTAN (buscar y reemplazar en todo el archivo):
-        CALLE 000 e/ 00 y 00 → dirección real del estudio
         www.arfuchcastillo.com.ar → dominio real
      ═══════════════════════════════════════════════════════════════════════ -->
 
@@ -47,7 +50,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
 
-<!-- SEO local. ⚠ Completar horarios y redes cuando el estudio los pase. -->
+<!-- SEO local. El estudio no tiene redes sociales: por eso no hay
+     sameAs ni enlaces a perfiles. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,9 +61,29 @@
   "url": "https://www.arfuchcastillo.com.ar/",
   "telephone": "+5492215756941",
   "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "17:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "12:00"
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "CALLE 000 e/ 00 y 00",
+    "streetAddress": "Calle 13 B N° 908",
     "addressLocality": "City Bell",
     "addressRegion": "Buenos Aires",
     "postalCode": "1896",
@@ -158,9 +182,8 @@
        izquierda. Sin composición centrada y sin fila de estadísticas.
        ════════════════════════════════════════════════════════════════ -->
   <section class="portada" id="portada" aria-labelledby="portada-titulo">
-    <!-- ⚠ REEMPLAZAR: ver la descripción dentro del propio placeholder.
-         El estudio no usa fotos propias ni de la oficina: la imagen es
-         ambiental (calle de La Plata), sin personas reconocibles. -->
+    <!-- El estudio no usa fotos propias ni de la oficina: la imagen es
+         ambiental, sin personas reconocibles. -->
     <img class="portada__foto"
          src="assets/img/heroImage.webp"
          alt="Avenida de La Plata con tránsito"
@@ -935,10 +958,9 @@
       <div class="contacto__datos">
         <div class="dato">
           <h3 class="dato__rotulo">Dónde estamos</h3>
-          <!-- ⚠ REEMPLAZAR por la dirección real del estudio -->
-          <p class="dato__valor">CALLE 000 e/ 00 y 00<br>City Bell, La Plata</p>
+          <p class="dato__valor">Calle 13 B N° 908<br>City Bell, La Plata</p>
           <a class="enlace-mapa"
-             href="https://www.google.com/maps/dir/?api=1&amp;destination=CALLE+000+City+Bell+La+Plata+Buenos+Aires"
+             href="https://www.google.com/maps/dir/?api=1&amp;destination=Calle+13+B+908,+City+Bell,+La+Plata,+Buenos+Aires,+Argentina"
              target="_blank" rel="noopener" data-evento="mapa-comollegar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path>
@@ -950,8 +972,18 @@
 
         <div class="dato">
           <h3 class="dato__rotulo">Horarios</h3>
-          <!-- ⚠ REEMPLAZAR por los días y horarios reales de atención -->
-          <p class="dato__valor">Acá van los días y horarios reales de atención en el estudio.</p>
+          <!-- Si cambian, actualizar también openingHoursSpecification
+               en el JSON-LD del <head>: Google usa ese dato, no este. -->
+          <dl class="horarios">
+            <div>
+              <dt>Lunes a viernes</dt>
+              <dd>10 a 12 h y 17 a 20 h</dd>
+            </div>
+            <div>
+              <dt>Sábados</dt>
+              <dd>10 a 12 h</dd>
+            </div>
+          </dl>
           <p class="dato__nota">Las consultas online se coordinan por WhatsApp, también fuera de ese horario.</p>
         </div>
       </div>
@@ -959,9 +991,11 @@
       <!-- Mapa con carga diferida: el iframe de Google pesa cientos de KB y
            haría varias peticiones a terceros en cada visita. -->
       <div class="mapa" id="mapa">
-        <!-- ⚠ REEMPLAZAR la dirección dentro de data-mapa por la real -->
+        <!-- ⚠ VERIFICAR que el pin caiga en el lugar correcto. Si Google no
+             resuelve bien la calle con letra, reemplazar la consulta por las
+             coordenadas o por el Place ID de la ficha del estudio. -->
         <button class="mapa__disparador" type="button"
-                data-mapa="https://www.google.com/maps?q=CALLE+000+City+Bell+La+Plata+Buenos+Aires&amp;output=embed">
+                data-mapa="https://www.google.com/maps?q=Calle+13+B+908,+City+Bell,+La+Plata,+Buenos+Aires,+Argentina&amp;output=embed">
           <span class="mapa__marca" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path>
@@ -1004,19 +1038,6 @@
       <a class="pie__tel" href="tel:+5492215756941" data-evento="tel-pie">2215 75-6941</a>
       <a href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre..."
          target="_blank" rel="noopener" data-evento="wa-pie">WhatsApp</a>
-      <ul class="pie__redes">
-        <li>
-          <!-- ⚠ REEMPLAZAR por el usuario real de Instagram del estudio -->
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-             aria-label="Instagram de Arfuch Castillo &amp; Asoc.">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle>
-            </svg>
-          </a>
-        </li>
-      </ul>
     </div>
   </div>
 
@@ -1025,7 +1046,7 @@
       <!-- El año queda escrito acá como respaldo: si el JS no corre se ve
            igual y nunca queda vacío. main.js lo actualiza al año en curso. -->
       <p>© <span data-anio>2026</span> Arfuch Castillo &amp; Asoc.</p>
-      <address>CALLE 000 e/ 00 y 00 — City Bell, La Plata, Buenos Aires.</address>
+      <address>Calle 13 B N° 908 — City Bell, La Plata, Buenos Aires.</address>
       <p class="pie__credito">
         Diseño y desarrollo:
         <a href="https://leandroheffes.com" target="_blank" rel="noopener">Leandro Heffes</a>
