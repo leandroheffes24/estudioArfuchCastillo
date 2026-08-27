@@ -87,13 +87,16 @@
   }
 
 
-  /* ─── 3. Riel de casos ────────────────────────────────────────────────────
+  /* ─── 3. Riel de casos y de temas ────────────────────────────────────────────────────
      Marca en qué caso está parado el visitante. Se usa el punto medio de la
      ventana como referencia: así el caso activo es el que ocupa el centro de
      la pantalla, que es lo que la persona está leyendo. */
 
   var enlacesRiel = document.querySelectorAll('[data-riel]');
-  var bloquesCaso = document.querySelectorAll('.caso');
+  // .caso son los bloques de la home; .tema, los subtemas de las paginas
+  // de area. El riel funciona igual en las dos: observa el bloque que
+  // cruza el medio de la ventana y marca su entrada.
+  var bloquesCaso = document.querySelectorAll('.caso, .tema');
 
   if (enlacesRiel.length && bloquesCaso.length) {
     var marcarActivo = function (id) {
@@ -125,26 +128,11 @@
   }
 
 
-  /* ─── 4. Botones flotantes ────────────────────────────────────────────────
-     Aparecen cuando los CTA de la portada salen de pantalla, para no
-     duplicar el mismo llamado dos veces en la primera vista. */
-
-  var flotantes = document.getElementById('flotantes');
-  var accionesPortada = document.getElementById('portada-acciones');
-
-  if (flotantes) {
-    if (accionesPortada && 'IntersectionObserver' in window) {
-      var observadorPortada = new IntersectionObserver(function (entradas) {
-        entradas.forEach(function (entrada) {
-          flotantes.dataset.visible = entrada.isIntersecting ? 'false' : 'true';
-        });
-      }, { rootMargin: '-72px 0px 0px 0px' });
-
-      observadorPortada.observe(accionesPortada);
-    } else {
-      flotantes.dataset.visible = 'true';
-    }
-  }
+  /* ─── 4. Contacto permanente ───────────────────────────────────
+     La barra de WhatsApp ya no se muestra ni se oculta según el scroll: el
+     punto 10 del informe pide que esté visible en todo momento, así que es
+     CSS puro y no necesita JavaScript. Se deja el hueco numerado para no
+     renumerar los bloques siguientes. */
 
 
   /* ─── 5. Mapa con carga diferida ──────────────────────────────────────────
@@ -190,9 +178,13 @@
       '.casos-indice__encabezado, .casos-indice__lista > li',
       '.caso',
       '.errores__encabezado, .error, .errores__cierre',
+      '.situaciones__encabezado, .situacion, .situaciones__cierre',
       '.estudio__texto > *, .cobertura',
       '.llamada__encabezado, .consulta, .llamada__cierre',
-      '.contacto__llamado, .contacto__datos, .contacto .mapa'
+      '.contacto__llamado, .contacto__datos, .contacto .mapa',
+      '.tema',
+      '.preguntas-area__encabezado, .preguntas-area__lista',
+      '.cierre-area__llamado, .cierre-area__otras'
     ];
 
     grupos.forEach(function (selector) {

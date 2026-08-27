@@ -23,23 +23,52 @@
         Aparece en 6 lugares: este comentario, el JSON-LD, la sección de
         contacto, el enlace "Cómo llegar", el mapa diferido y el pie.
 
-     ⚠ DATOS QUE TODAVÍA FALTAN (buscar y reemplazar en todo el archivo):
-        www.arfuchcastillo.com.ar → dominio real
+     ╔═════════════════════════════════════════════════════════════╗
+     ║  CRITERIO DEONTOLÓGICO — LEER ANTES DE AGREGAR TEXTO O CAMPAÑAS      ║
+     ╚═════════════════════════════════════════════════════════════╝
+
+     El sitio se mantiene deliberadamente sobrio por las normas éticas del
+     ejercicio profesional. NO se incorporan:
+
+        · promociones ni descuentos          · comparaciones con otros estudios
+        · resultados garantizados            · afirmaciones de superioridad
+        · testimonios sin revisión previa    · mensajes agresivos de captación
+        · expresiones comerciales impropias de un estudio jurídico
+
+     Tampoco va `priceRange` en el JSON-LD: Google lo muestra como banda de
+     precio junto al negocio y no corresponde a un estudio jurídico.
+
+     Las afirmaciones jurídicas van en términos que el Estudio pueda defender:
+     "puede corresponder", "en determinados casos", "según las circunstancias",
+     "debe analizarse". Evitar "siempre", "nunca", "garantizamos", "seguro que".
+
+     ⚠ Antes de incorporar publicidad paga o campañas, revisar el criterio
+       vigente del COLEGIO DE ABOGADOS DE LA PLATA en materia de publicidad y
+       captación profesional.
+
+     DOMINIO — ya cargado: arfuchcastillo.com.ar
+        Aparece en 4 lugares del <head>: canonical, og:url, og:image y el
+        campo "url" del JSON-LD. Se usa SIN www. Si en el hosting se
+        conecta también el www, hay que redirigirlo al dominio pelado:
+        servir el mismo contenido en las dos direcciones divide el SEO.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<title>Arfuch Castillo & Asoc. — Abogados en La Plata y City Bell | Multas, accidentes y derecho civil</title>
-<meta name="description" content="Estudio jurídico en City Bell, La Plata. Multas y fotomultas, renovación del carnet de conducir, accidentes de tránsito y derecho civil. Más de 20 años de experiencia. Atendemos en La Plata y toda la zona.">
+<title>Abogados de multas y accidentes en La Plata | Arfuch Castillo</title>
+<meta name="description" content="Estudio jurídico en City Bell, La Plata. Multas y fotomultas, licencia de conducir, accidentes de tránsito y derecho civil. Más de 20 años.">
 <meta name="author" content="Arfuch Castillo &amp; Asoc.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.arfuchcastillo.com.ar/">
+<link rel="canonical" href="https://arfuchcastillo.com.ar/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Arfuch Castillo &amp; Asoc.">
 <meta property="og:title" content="Arfuch Castillo &amp; Asoc. — Abogados en La Plata y City Bell">
 <meta property="og:description" content="Multas y fotomultas, carnet de conducir, accidentes de tránsito y derecho civil. Más de 20 años en City Bell, La Plata.">
-<meta property="og:url" content="https://www.arfuchcastillo.com.ar/">
-<meta property="og:image" content="https://www.arfuchcastillo.com.ar/assets/img/og-arfuch-castillo.jpg">
+<meta property="og:url" content="https://arfuchcastillo.com.ar/">
+<meta property="og:image" content="https://arfuchcastillo.com.ar/assets/img/og-arfuch-castillo.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Estudio jurídico Arfuch Castillo &amp; Asoc. en City Bell, La Plata.">
 <meta name="twitter:card" content="summary_large_image">
 
 <meta name="theme-color" content="#12253F">
@@ -50,27 +79,74 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
 
+<!-- ⚠ GOOGLE ANALYTICS / SEARCH CONSOLE — pendientes de conectar.
+
+     Analytics 4: pegar el fragmento de gtag JUSTO ACÁ, en las 6 páginas.
+     El sitio ya trae 70 ganchos `data-evento` en los enlaces de teléfono y de
+     WhatsApp (tel-barra, wa-cierre-multas, wa-barra-fija, etc.), pensados para
+     medir qué área genera cada consulta. Una vez instalado gtag alcanza con un
+     listener sobre [data-evento] para reportarlos como eventos; sin eso sólo
+     se ve el total de visitas y no de dónde salen las consultas, que es el
+     dato que importa.
+
+     Search Console: verificar por DNS —preferible, no depende del HTML— o
+     pegando acá la meta-tag que entrega Google. Después enviar
+     https://arfuchcastillo.com.ar/sitemap.xml -->
+
 <!-- SEO local. El estudio no tiene redes sociales: por eso no hay
      sameAs ni enlaces a perfiles. -->
+
+<!-- ⚠ AL CREAR EL PERFIL DE EMPRESA DE GOOGLE, agregar estos dos campos al
+     JSON-LD de arriba (van dentro del objeto, antes del cierre):
+
+       "geo": {
+         "@type": "GeoCoordinates",
+         "latitude": "-00.000000",
+         "longitude": "-00.000000"
+       },
+       "sameAs": ["URL del Perfil de Empresa de Google"]
+
+     Las coordenadas se copian del propio Perfil una vez publicado; no se
+     estiman, porque un pin mal ubicado es peor que ninguno. El `sameAs` es
+     lo que le dice a Google que esta web y ese Perfil son el mismo negocio.
+
+     Antes de crear el Perfil, verificar que el nombre, la direccion y el
+     telefono coincidan EXACTAMENTE con los de este sitio:
+       Arfuch Castillo & Asoc.
+       Calle 13 B N° 908, City Bell, La Plata, Provincia de Buenos Aires
+       +54 9 2215 75-6941
+     Google contrasta esos tres datos entre el Perfil y la web. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
+  "@id": "https://arfuchcastillo.com.ar/#estudio",
   "name": "Arfuch Castillo & Asoc.",
   "description": "Estudio jurídico especializado en multas y fotomultas, renovación del carnet de conducir, accidentes de tránsito y derecho civil. Más de 20 años de experiencia. Atención en City Bell y en toda la zona de La Plata.",
-  "url": "https://www.arfuchcastillo.com.ar/",
+  "url": "https://arfuchcastillo.com.ar/",
   "telephone": "+5492215756941",
-  "priceRange": "$$",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "opens": "10:00",
       "closes": "12:00"
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "opens": "17:00",
       "closes": "20:00"
     },
@@ -85,18 +161,172 @@
     "@type": "PostalAddress",
     "streetAddress": "Calle 13 B N° 908",
     "addressLocality": "City Bell",
-    "addressRegion": "Buenos Aires",
+    "addressRegion": "Provincia de Buenos Aires",
     "postalCode": "1896",
     "addressCountry": "AR"
   },
+  "hasMap": "https://www.google.com/maps?q=Calle+13+B+908,+City+Bell,+La+Plata,+Buenos+Aires,+Argentina",
   "areaServed": [
-    { "@type": "City", "name": "La Plata" },
-    { "@type": "City", "name": "City Bell" },
-    { "@type": "City", "name": "Manuel B. Gonnet" },
-    { "@type": "City", "name": "Villa Elisa" },
-    { "@type": "City", "name": "Tolosa" },
-    { "@type": "City", "name": "Berisso" },
-    { "@type": "City", "name": "Ensenada" }
+    {
+      "@type": "City",
+      "name": "City Bell",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "La Plata",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Manuel B. Gonnet",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Villa Elisa",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Joaquín Gorina",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Tolosa",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Ringuelet",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Hernández",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Los Hornos",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "San Carlos",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Villa Elvira",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Altos de San Lorenzo",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Abasto",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lisandro Olmos",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Melchor Romero",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Arturo Seguí",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "El Peligro",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Ángel Etcheverry",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Berisso",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Ensenada",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Buenos Aires"
+      }
+    }
   ],
   "availableLanguage": "Spanish",
   "knowsAbout": [
@@ -105,7 +335,34 @@
     "Renovación del carnet de conducir",
     "Accidentes de tránsito",
     "Derecho civil"
-  ]
+  ],
+  "employee": {
+    "@type": "Attorney",
+    "name": "Luis Claudio Arfuch Castillo",
+    "jobTitle": "Abogado",
+    "worksFor": {
+      "@type": "LegalService",
+      "name": "Arfuch Castillo & Asoc."
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Colegio de Abogados de La Plata (CALP)"
+    },
+    "identifier": "T° LXIV – F° 107",
+    "knowsAbout": [
+      "Derecho Administrativo",
+      "Justicia de Faltas",
+      "Multas y fotomultas",
+      "Licencias de conducir",
+      "Acciones de amparo",
+      "Accidentes de tránsito",
+      "Responsabilidad civil"
+    ],
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Provincia de Buenos Aires"
+    }
+  }
 }
 </script>
 </head>
@@ -128,9 +385,9 @@
     </a>
 
     <nav class="barra__nav" aria-label="Navegación principal">
-      <a href="#caso-multas">Multas</a>
-      <a href="#caso-accidentes">Accidentes</a>
-      <a href="#caso-carnet">Licencia</a>
+      <a href="multas-fotomultas-provincia-buenos-aires/">Multas</a>
+      <a href="abogado-accidentes-transito/">Accidentes</a>
+      <a href="problemas-renovacion-licencia-conducir/">Licencia</a>
       <a href="#caso-civil">Civil</a>
       <a href="#estudio">El estudio</a>
       <a href="#contacto">Contacto</a>
@@ -153,10 +410,12 @@
 
   <nav class="menu-movil" id="menu-movil" aria-label="Navegación principal (móvil)" hidden>
     <ul class="menu-movil__lista">
-      <li><a href="#casos">Tu consulta</a></li>
-      <li><a href="#caso-multas">Multas y fotomultas</a></li>
-      <li><a href="#caso-accidentes">Accidentes de tránsito</a></li>
-      <li><a href="#caso-carnet">Licencia de conducir</a></li>
+      <li><a href="#casos">Su consulta</a></li>
+      <li><a href="multas-fotomultas-provincia-buenos-aires/">Multas y fotomultas</a></li>
+      <li><a href="abogado-accidentes-transito/">Accidentes de tránsito</a></li>
+      <li><a href="descargo-multas-transito/">Descargos de multas</a></li>
+      <li><a href="problemas-renovacion-licencia-conducir/">Licencia de conducir</a></li>
+      <li><a href="amparo-licencia-conducir/">Amparos por licencia</a></li>
       <li><a href="#caso-civil">Derecho civil</a></li>
       <li><a href="#errores">Errores frecuentes</a></li>
       <li><a href="#estudio">El estudio</a></li>
@@ -192,7 +451,7 @@
     <div class="portada__contenido contenedor">
       <p class="ante-titulo ante-titulo--claro">Estudio jurídico en City Bell, La&nbsp;Plata</p>
       <h1 class="portada__titulo" id="portada-titulo">
-        Resolvemos tus <span class="destacado">problemas legales</span>
+        Resolvemos sus <span class="destacado">problemas legales</span>
       </h1>
       <p class="portada__bajada">
         Multas y fotomultas, accidentes de tránsito, renovación del carnet y
@@ -214,7 +473,7 @@
             <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
             <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
           </svg>
-          WhatsApp
+          Consultar por WhatsApp
         </a>
       </div>
     </div>
@@ -229,24 +488,24 @@
   <section class="casos-indice" id="casos" aria-labelledby="casos-titulo">
     <div class="contenedor">
       <div class="casos-indice__encabezado">
-        <h2 class="casos-indice__titulo" id="casos-titulo">Contanos tu problema y te ayudamos a resolverlo</h2>
+        <h2 class="casos-indice__titulo" id="casos-titulo">Cuéntenos su problema y lo ayudamos a resolverlo</h2>
         <p class="casos-indice__nota">
-          Elegí el área que corresponde a tu consulta. En cada una vas a
+          Elija el área que corresponde a su consulta. En cada una va a
           encontrar qué se puede hacer, cuánto puede demorar y qué
-          documentación necesitás.
+          documentación necesita.
         </p>
       </div>
 
       <ul class="casos-indice__lista">
         <li>
-          <a class="acceso" href="#caso-multas">
+          <a class="acceso" href="multas-fotomultas-provincia-buenos-aires/">
             <span class="acceso__foto">
               <img src="assets/img/fotomultaImage.webp" alt="" width="1600" height="1000" loading="lazy" decoding="async">
             </span>
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">01</span>
               <span class="acceso__titulo">Multas y fotomultas</span>
-              <span class="acceso__nota">Analizamos la validez del acta antes de que pagues.</span>
+              <span class="acceso__nota">Consulte su situación antes de pagar.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -255,14 +514,14 @@
         </li>
 
         <li>
-          <a class="acceso" href="#caso-accidentes">
+          <a class="acceso" href="abogado-accidentes-transito/">
             <span class="acceso__foto">
               <img src="assets/img/accidenteImage.webp" alt="" width="1600" height="1000" loading="lazy" decoding="async">
             </span>
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">02</span>
               <span class="acceso__titulo">Accidentes de tránsito</span>
-              <span class="acceso__nota">Reclamo de daños materiales y de lesiones.</span>
+              <span class="acceso__nota">Envíenos los datos del accidente para evaluar el reclamo.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -271,14 +530,14 @@
         </li>
 
         <li>
-          <a class="acceso" href="#caso-carnet">
+          <a class="acceso" href="problemas-renovacion-licencia-conducir/">
             <span class="acceso__foto">
               <img src="assets/img/carnetImage.webp" alt="" width="1600" height="1000" loading="lazy" decoding="async">
             </span>
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">03</span>
               <span class="acceso__titulo">Licencia de conducir</span>
-              <span class="acceso__nota">Renovación, recuperación e inhabilitaciones.</span>
+              <span class="acceso__nota">Cuéntenos por qué no puede renovar su licencia.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -294,7 +553,7 @@
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">04</span>
               <span class="acceso__titulo">Derecho civil</span>
-              <span class="acceso__nota">Contratos, daños y perjuicios y otros conflictos.</span>
+              <span class="acceso__nota">Cuéntenos el conflicto y evaluamos cómo reclamar.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -306,279 +565,21 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       LOS CUATRO CASOS
-       Panel lateral fijo + un bloque autocontenido por caso.
+  <!-- ═════════════════════════════════════════════════════════════════════
+       DERECHO CIVIL
+       Es la única área que se desarrolla en la home. Las otras cuatro
+       tienen página propia —/multas-fotomultas-provincia-buenos-aires/,
+       /descargo-multas-transito/, /problemas-renovacion-licencia-conducir/,
+       /amparo-licencia-conducir/ y /abogado-accidentes-transito/— y acá
+       sólo se las presenta desde el índice de arriba. Así la home no le
+       compite a sus propias páginas por la misma búsqueda.
        ════════════════════════════════════════════════════════════════ -->
-  <div class="casos">
-    <div class="contenedor casos__interior">
-
-      <!-- Índice fijo: marca en cuál caso está el visitante -->
-      <aside class="riel" aria-label="Índice de casos">
-        <p class="riel__rotulo">Tu caso</p>
-        <ol class="riel__lista">
-          <li><a href="#caso-multas" data-riel="caso-multas"><span>01</span> Multas y fotomultas</a></li>
-          <li><a href="#caso-accidentes" data-riel="caso-accidentes"><span>02</span> Accidentes de tránsito</a></li>
-          <li><a href="#caso-carnet" data-riel="caso-carnet"><span>03</span> Licencia de conducir</a></li>
-          <li><a href="#caso-civil" data-riel="caso-civil"><span>04</span> Derecho civil</a></li>
-        </ol>
-        <a class="riel__tel" href="tel:+5492215756941" data-evento="tel-riel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
-          </svg>
-          2215 75-6941
-        </a>
-      </aside>
-
+  <section class="casos" aria-labelledby="caso-civil-titulo">
+    <div class="contenedor">
       <div class="casos__contenido">
 
-        <!-- ── 01 · MULTAS Y FOTOMULTAS ──────────────────────────────── -->
-        <article class="caso" id="caso-multas" aria-labelledby="caso-multas-titulo">
-          <header class="caso__encabezado">
-            <p class="caso__ordinal" aria-hidden="true">01</p>
-            <h2 class="caso__titulo" id="caso-multas-titulo">Multas y fotomultas</h2>
-          </header>
-
-          <img class="caso__foto" src="assets/img/fotomultaImage.webp"
-               alt="Acta de infracción de tránsito" width="1600" height="1000"
-               loading="lazy" decoding="async">
-
-          <p class="caso__lead">
-            Muchas multas tienen errores que las invalidan. Antes de pagar
-            conviene saber si la tuya es una de esas.
-          </p>
-
-          <div class="caso__hacemos">
-            <h3 class="caso__subtitulo">Qué hacemos</h3>
-            <ul class="lista-marcada">
-              <li>Analizamos la validez del acta o de la notificación.</li>
-              <li>Te decimos si conviene impugnarla, pagarla con descuento o dejarla correr.</li>
-              <li>Presentamos el descargo y seguimos el trámite hasta la resolución.</li>
-            </ul>
-          </div>
-
-          <div class="caso__datos">
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Cuánto tarda</h3>
-              <p class="ficha__texto">
-                Depende del organismo que labró el acta. En la primera consulta
-                te damos un plazo estimado y te avisamos si se demora.
-              </p>
-            </div>
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Qué necesitás</h3>
-              <p class="ficha__texto">
-                El acta o la notificación de la fotomulta. Si no la tenés a
-                mano, con el número de dominio del vehículo alcanza para empezar.
-              </p>
-            </div>
-          </div>
-
-          <div class="caso__preguntas">
-            <h3 class="caso__subtitulo">Lo que más nos preguntan</h3>
-            <details class="pregunta">
-              <summary><span>¿Puedo impugnar una fotomulta?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>En muchos casos sí. Las actas y las fotomultas tienen que cumplir requisitos formales, y cuando falta alguno o hay errores en los datos, la infracción puede cuestionarse. También hay plazos que conviene no dejar vencer.</p></div>
-            </details>
-            <details class="pregunta">
-              <summary><span>¿Me conviene pagarla con descuento?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>A veces sí y a veces no: pagar implica reconocer la infracción y eso suma antecedentes. Lo vemos caso por caso antes de que tomes la decisión.</p></div>
-            </details>
-          </div>
-
-          <figure class="testimonio-caso">
-            <!-- ⚠ REEMPLAZAR por un testimonio real y autorizado. NO inventar:
-                 publicar reseñas falsas es publicidad engañosa. -->
-            <blockquote><p>Acá va el testimonio de un cliente de multas, orientado al resultado. No «excelentes abogados», sino algo como «me anularon una fotomulta que me querían cobrar sin fundamento».</p></blockquote>
-            <figcaption><cite>Nombre del cliente</cite> · Localidad</figcaption>
-          </figure>
-
-          <div class="caso__acciones">
-            <a class="boton boton--principal" href="tel:+5492215756941" data-evento="tel-multas">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
-              </svg>
-              Llamar por mi multa
-            </a>
-            <a class="boton boton--secundario"
-               href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre%20una%20multa%20o%20fotomulta."
-               target="_blank" rel="noopener" data-evento="wa-multas">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
-                <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
-              </svg>
-              Enviar el acta por WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <!-- ── 02 · ACCIDENTES DE TRÁNSITO ───────────────────────────── -->
-        <article class="caso" id="caso-accidentes" aria-labelledby="caso-accidentes-titulo">
-          <header class="caso__encabezado">
-            <p class="caso__ordinal" aria-hidden="true">02</p>
-            <h2 class="caso__titulo" id="caso-accidentes-titulo">Accidentes de tránsito</h2>
-          </header>
-
-          <img class="caso__foto" src="assets/img/accidenteImage.webp"
-               alt="Daños en un vehículo tras un accidente de tránsito" width="1600" height="1000"
-               loading="lazy" decoding="async">
-
-          <p class="caso__lead">
-            Se puede reclamar tanto lo que costó arreglar el auto como las
-            lesiones y lo que dejaron. No hace falta que vayas solo a discutir
-            con la aseguradora.
-          </p>
-
-          <div class="caso__hacemos">
-            <h3 class="caso__subtitulo">Qué hacemos</h3>
-            <ul class="lista-marcada">
-              <li>Reclamamos los daños materiales del vehículo.</li>
-              <li>Reclamamos las lesiones y sus consecuencias.</li>
-              <li>Te representamos frente a la aseguradora y, si no hay acuerdo, en la instancia judicial.</li>
-            </ul>
-          </div>
-
-          <div class="caso__datos">
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Cuánto tarda</h3>
-              <p class="ficha__texto">
-                Si hay acuerdo con la aseguradora se resuelve mucho más rápido
-                que por vía judicial. Te damos el plazo estimado de cada camino
-                antes de elegir.
-              </p>
-            </div>
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Qué necesitás</h3>
-              <p class="ficha__texto">
-                Denuncia y constancia policial, fotos de los daños,
-                presupuestos de arreglo y, si hubo lesiones, los estudios
-                médicos.
-              </p>
-            </div>
-          </div>
-
-          <div class="caso__preguntas">
-            <h3 class="caso__subtitulo">Lo que más nos preguntan</h3>
-            <details class="pregunta">
-              <summary><span>¿Y si la culpa fue compartida?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>Igual puede haber reclamo. La responsabilidad se puede repartir en proporciones y eso se discute con la prueba que haya: fotos, testigos y la constancia policial.</p></div>
-            </details>
-            <details class="pregunta">
-              <summary><span>Pasó hace meses, ¿todavía puedo reclamar?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>Probablemente sí, pero los reclamos tienen plazos y conviene no dejarlos correr. Contanos cuándo fue y te decimos en qué situación estás.</p></div>
-            </details>
-          </div>
-
-          <figure class="testimonio-caso">
-            <!-- ⚠ REEMPLAZAR por un testimonio real y autorizado -->
-            <blockquote><p>Acá va el testimonio de alguien que reclamó después de un accidente: cómo lo acompañaron frente a la aseguradora y qué resultado obtuvo, sin revelar detalles del caso.</p></blockquote>
-            <figcaption><cite>Nombre del cliente</cite> · Localidad</figcaption>
-          </figure>
-
-          <div class="caso__acciones">
-            <a class="boton boton--principal" href="tel:+5492215756941" data-evento="tel-accidentes">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
-              </svg>
-              Llamar por mi accidente
-            </a>
-            <a class="boton boton--secundario"
-               href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre%20un%20accidente%20de%20tr%C3%A1nsito."
-               target="_blank" rel="noopener" data-evento="wa-accidentes">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
-                <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
-              </svg>
-              Consultar por WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <!-- ── 03 · CARNET DE CONDUCIR ───────────────────────────────── -->
-        <article class="caso" id="caso-carnet" aria-labelledby="caso-carnet-titulo">
-          <header class="caso__encabezado">
-            <p class="caso__ordinal" aria-hidden="true">03</p>
-            <h2 class="caso__titulo" id="caso-carnet-titulo">Licencia de conducir</h2>
-          </header>
-
-          <img class="caso__foto" src="assets/img/carnetImage.webp"
-               alt="Licencia de conducir argentina" width="1600" height="1000"
-               loading="lazy" decoding="async">
-
-          <p class="caso__lead">
-            Vencido hace años, con multas impagas trabando el trámite o con una
-            inhabilitación encima: en general hay camino, aunque haya que
-            resolver algo antes.
-          </p>
-
-          <div class="caso__hacemos">
-            <h3 class="caso__subtitulo">Qué hacemos</h3>
-            <ul class="lista-marcada">
-              <li>Gestionamos la renovación, incluso con vencimientos prolongados.</li>
-              <li>Trabajamos la recuperación en casos de inhabilitación.</li>
-              <li>Resolvemos primero las infracciones impagas que frenan el trámite.</li>
-            </ul>
-          </div>
-
-          <div class="caso__datos">
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Cuánto tarda</h3>
-              <p class="ficha__texto">
-                Una renovación simple es rápida. Si hay una inhabilitación o
-                deudas de infracciones de por medio, primero hay que resolver
-                eso y el plazo cambia.
-              </p>
-            </div>
-            <div class="ficha">
-              <h3 class="ficha__rotulo">Qué necesitás</h3>
-              <p class="ficha__texto">
-                Tu DNI y el carnet vencido si lo conservás. Si hay una
-                inhabilitación, cualquier notificación que hayas recibido.
-              </p>
-            </div>
-          </div>
-
-          <div class="caso__preguntas">
-            <h3 class="caso__subtitulo">Lo que más nos preguntan</h3>
-            <details class="pregunta">
-              <summary><span>Está vencido hace muchos años, ¿tengo que hacer todo de nuevo?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>Depende de cuánto tiempo pasó y de la jurisdicción que lo emitió. En algunos casos se renueva y en otros hay que rehacer parte del trámite. Lo verificamos antes de que pierdas un día en la oficina.</p></div>
-            </details>
-            <details class="pregunta">
-              <summary><span>Tengo multas impagas, ¿puedo renovar igual?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>Las infracciones impagas suelen trabar el trámite. Lo primero es ver si esas multas son válidas: a veces se resuelven impugnándolas y no pagándolas.</p></div>
-            </details>
-          </div>
-
-          <figure class="testimonio-caso">
-            <!-- ⚠ REEMPLAZAR por un testimonio real y autorizado -->
-            <blockquote><p>Acá va el testimonio de alguien que destrabó el carnet: qué trámite estaba frenado, cómo se resolvió y en cuánto tiempo.</p></blockquote>
-            <figcaption><cite>Nombre del cliente</cite> · Localidad</figcaption>
-          </figure>
-
-          <div class="caso__acciones">
-            <a class="boton boton--principal" href="tel:+5492215756941" data-evento="tel-carnet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
-              </svg>
-              Llamar por mi carnet
-            </a>
-            <a class="boton boton--secundario"
-               href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre%20la%20renovaci%C3%B3n%20de%20mi%20carnet%20de%20conducir."
-               target="_blank" rel="noopener" data-evento="wa-carnet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
-                <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
-              </svg>
-              Consultar por WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <!-- ── 04 · ASUNTOS CIVILES ──────────────────────────────────── -->
         <article class="caso" id="caso-civil" aria-labelledby="caso-civil-titulo">
           <header class="caso__encabezado">
-            <p class="caso__ordinal" aria-hidden="true">04</p>
             <h2 class="caso__titulo" id="caso-civil-titulo">Derecho civil</h2>
           </header>
 
@@ -588,7 +589,7 @@
 
           <p class="caso__lead">
             Conflictos que no se resuelven hablando y necesitan intervención
-            jurídica. Te explicamos desde el inicio qué se puede hacer y qué no,
+            jurídica. Le explicamos desde el inicio qué se puede hacer y qué no,
             sin tecnicismos.
           </p>
 
@@ -608,15 +609,15 @@
               <h3 class="ficha__rotulo">Cuánto tarda</h3>
               <p class="ficha__texto">
                 Varía mucho según el conflicto y el juzgado que intervenga. Dar
-                un número cerrado sería una promesa vacía; sí te damos un plazo
+                un número cerrado sería una promesa vacía; sí le damos un plazo
                 estimado realista.
               </p>
             </div>
             <div class="ficha">
-              <h3 class="ficha__rotulo">Qué necesitás</h3>
+              <h3 class="ficha__rotulo">Qué necesita</h3>
               <p class="ficha__texto">
                 El contrato o los papeles en discusión, y cualquier intercambio
-                que hayas tenido con la otra parte, aunque sea por WhatsApp o
+                que haya tenido con la otra parte, aunque sea por WhatsApp o
                 mail.
               </p>
             </div>
@@ -626,19 +627,14 @@
             <h3 class="caso__subtitulo">Lo que más nos preguntan</h3>
             <details class="pregunta">
               <summary><span>¿Se puede resolver sin llegar a juicio?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>Muchas veces sí, y suele convenir: es más rápido y más barato. Antes de demandar se puede intentar un reclamo formal o una negociación. Si no prospera, seguimos por la vía judicial.</p></div>
+              <div class="pregunta__respuesta"><p>En muchos casos sí, y suele convenir: por lo general resulta más rápido y menos costoso. Antes de demandar puede intentarse un reclamo formal o una negociación, y si no prospera se continúa por la vía judicial.</p></div>
             </details>
             <details class="pregunta">
               <summary><span>No tengo contrato firmado, ¿igual puedo reclamar?</span><span class="pregunta__signo" aria-hidden="true"></span></summary>
-              <div class="pregunta__respuesta"><p>En muchos casos sí. Los mensajes, transferencias, facturas y testigos también sirven como prueba. Traé lo que tengas y lo evaluamos.</p></div>
+              <div class="pregunta__respuesta"><p>En muchos casos sí. Los mensajes, transferencias, facturas y testigos pueden tener valor probatorio, según las circunstancias. Traiga lo que tenga y lo evaluamos.</p></div>
             </details>
           </div>
 
-          <figure class="testimonio-caso">
-            <!-- ⚠ REEMPLAZAR por un testimonio real y autorizado -->
-            <blockquote><p>Acá va el testimonio de un asunto civil: qué conflicto había y cómo se resolvió, contado en las palabras del cliente y sin tecnicismos.</p></blockquote>
-            <figcaption><cite>Nombre del cliente</cite> · Localidad</figcaption>
-          </figure>
 
           <div class="caso__acciones">
             <a class="boton boton--principal" href="tel:+5492215756941" data-evento="tel-civil">
@@ -654,20 +650,14 @@
                 <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
                 <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
               </svg>
-              Consultar por WhatsApp
+              Enviar los papeles por WhatsApp
             </a>
           </div>
         </article>
 
-        <p class="casos__resto">
-          ¿Tu consulta no corresponde a ninguna de estas áreas?
-          <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-resto">Llamanos al 2215 75-6941</a>
-          y te decimos si podemos ayudarte.
-        </p>
-
       </div>
     </div>
-  </div>
+  </section>
 
 
   <!-- ════════════════════════════════════════════════════════════════════
@@ -700,9 +690,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Revisala antes. Pagar implica reconocer la infracción y suma
-              antecedentes, y muchas tienen errores que las invalidan. Una vez
-              que pagaste, ya no hay nada que discutir.
+              Revísela antes. El pago de una infracción puede limitar considerablemente las posibilidades posteriores de cuestionamiento, por lo que resulta conveniente analizar la situación antes de efectuarlo.
             </p>
           </div>
         </li>
@@ -715,9 +703,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Averiguá primero qué se puede reclamar. La primera propuesta suele
-              cubrir el arreglo del auto y dejar afuera las lesiones y sus
-              consecuencias. Al firmar, el reclamo se cierra.
+              Averigüe primero qué se puede reclamar. La primera propuesta suele cubrir el arreglo del auto y dejar afuera las lesiones y sus consecuencias. Firmar un acuerdo puede cerrar la posibilidad de reclamar más adelante.
             </p>
           </div>
         </li>
@@ -730,9 +716,8 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Fijate antes si tenés infracciones impagas o una inhabilitación.
-              Si las hay, el trámite se cae en el mostrador y perdiste el día.
-              Se puede verificar de antemano.
+              Fíjese antes si tiene infracciones impagas o una inhabilitación.
+              Si las hay, el trámite suele frenarse en el mostrador. Conviene verificarlo de antemano.
             </p>
           </div>
         </li>
@@ -745,9 +730,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Guardá todo: WhatsApp, mails, transferencias y facturas. En un
-              asunto civil eso es prueba, y muchas veces es la única que hay
-              cuando no se firmó un contrato.
+              Guarde todo: WhatsApp, mails, transferencias y facturas. En un asunto civil eso puede tener valor probatorio, y en muchos casos es lo único disponible cuando no se firmó un contrato.
             </p>
           </div>
         </li>
@@ -755,15 +738,114 @@
       </ol>
 
       <p class="errores__cierre">
-        Si ya tomaste alguna de estas decisiones, todavía puede haber margen:
+        Si ya tomó alguna de estas decisiones, todavía puede haber margen:
         cambia el camino, no necesariamente el resultado.
-        <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-errores">Llamanos al 2215 75-6941</a>
+        <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-errores">Llámenos al 2215 75-6941</a>
         y lo vemos.
       </p>
 
     </div>
   </section>
 
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       CASOS Y SITUACIONES FRECUENTES (punto 13 del informe)
+       Situaciones generales y anonimizadas. NO se publican datos de
+       clientes ni se reconstruyen casos reales: son los patrones que se
+       repiten en la consulta. Demuestra experiencia mejor que afirmar
+       "somos especialistas".
+       ⚠ Textos a validar por el Estudio antes de publicar.
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="situaciones" id="situaciones" aria-labelledby="situaciones-titulo">
+    <div class="contenedor">
+
+      <header class="situaciones__encabezado">
+        <p class="ante-titulo">Casos y situaciones frecuentes</p>
+        <h2 class="situaciones__titulo" id="situaciones-titulo">
+          Tres situaciones que vemos todas las semanas
+        </h2>
+        <p class="situaciones__nota">
+          Situaciones generales, sin datos de ningún cliente. Si alguna se
+          parece a la suya, es probable que podamos ayudarlo.
+        </p>
+      </header>
+
+      <ol class="situaciones__lista">
+
+        <li class="situacion">
+          <div class="situacion__cabeza">
+            <span class="barra-acento" aria-hidden="true"></span>
+            <h3 class="situacion__titulo">Multas que impiden renovar una licencia</h3>
+          </div>
+          <p class="situacion__texto">
+            La persona se presenta a renovar y el trámite no avanza porque
+            figuran infracciones impagas, a veces de municipios distintos al de
+            su domicilio y de las que no tenía registro.
+          </p>
+          <p class="situacion__rotulo">Qué se analiza</p>
+          <ul class="lista-marcada">
+            <li>Si esas infracciones fueron notificadas y de qué forma.</li>
+            <li>Qué organismo las labró y cuál es el competente para revisarlas.</li>
+            <li>Si corresponde cuestionarlas o si conviene regularizarlas para destrabar el trámite.</li>
+          </ul>
+          <p class="situacion__deriva">
+            <a href="problemas-renovacion-licencia-conducir/">Problemas para renovar la licencia</a>
+          </p>
+        </li>
+
+        <li class="situacion">
+          <div class="situacion__cabeza">
+            <span class="barra-acento" aria-hidden="true"></span>
+            <h3 class="situacion__titulo">Fotomulta que el conductor dice no haber recibido</h3>
+          </div>
+          <p class="situacion__texto">
+            La infracción aparece meses después, muchas veces al intentar hacer
+            otro trámite, y la persona sostiene que nunca fue notificada en su
+            domicilio.
+          </p>
+          <p class="situacion__rotulo">Qué se analiza</p>
+          <ul class="lista-marcada">
+            <li>Cómo, cuándo y a qué domicilio se practicó la notificación.</li>
+            <li>Los antecedentes del acta y los requisitos formales del procedimiento.</li>
+            <li>En qué estado están los plazos y qué vías siguen disponibles.</li>
+          </ul>
+          <p class="situacion__deriva">
+            <a href="multas-fotomultas-provincia-buenos-aires/#sin-notificar">Multas que nunca le notificaron</a>
+          </p>
+        </li>
+
+        <li class="situacion">
+          <div class="situacion__cabeza">
+            <span class="barra-acento" aria-hidden="true"></span>
+            <h3 class="situacion__titulo">Aseguradora que realiza una oferta indemnizatoria</h3>
+          </div>
+          <p class="situacion__texto">
+            Después de un accidente llega una propuesta de la compañía, en
+            general acotada a los daños del vehículo y con la expectativa de que
+            se acepte rápido.
+          </p>
+          <p class="situacion__rotulo">Qué se analiza</p>
+          <ul class="lista-marcada">
+            <li>Qué conceptos cubre la propuesta y cuáles deja afuera.</li>
+            <li>Si hubo lesiones y qué consecuencias dejaron, con la prueba médica disponible.</li>
+            <li>Qué implica firmar respecto de reclamar más adelante.</li>
+          </ul>
+          <p class="situacion__deriva">
+            <a href="abogado-accidentes-transito/#ofertas">Ofertas indemnizatorias</a>
+          </p>
+        </li>
+
+      </ol>
+
+      <p class="situaciones__cierre">
+        ¿Tiene un problema con multas o con su licencia?
+        <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-situaciones">Llámenos al 2215 75-6941</a>
+        o envíenos la documentación por WhatsApp y evaluaremos su situación.
+      </p>
+
+    </div>
+  </section>
 
   <!-- ════════════════════════════════════════════════════════════════════
        EL ESTUDIO
@@ -785,45 +867,33 @@
           no se resuelve solo.
         </p>
 
-        <dl class="estudio__cifras">
-          <div>
-            <dt>Años de experiencia</dt>
-            <dd>+20</dd>
-          </div>
-          <div>
-            <dt>Clientes atendidos</dt>
-            <dd>+500</dd>
-          </div>
-        </dl>
 
         <ul class="lista-marcada estudio__rasgos">
           <li>Cada caso lo seguimos individualmente, de principio a fin.</li>
-          <li>Te explicamos qué se puede hacer, cuánto puede tardar y cuáles son los pasos, sin tecnicismos.</li>
-          <li>Atendemos en el estudio de City Bell o a distancia, según lo que te quede mejor.</li>
+          <li>Le explicamos qué se puede hacer, cuánto puede tardar y cuáles son los pasos, sin tecnicismos.</li>
+          <li>Atendemos en el estudio de City Bell o a distancia, según lo que le quede mejor.</li>
         </ul>
 
-        <!-- El estudio no muestra a quienes trabajan en él. En lugar de la
-             presentación de los titulares va este bloque, que cumple la misma
-             función —dar con quién estás tratando— pero por el lado del
-             alcance: qué toman y qué no.
+        <!-- Bloque de alcance: qué materias toman y cuáles no. Acompaña a la
+             ficha del profesional que va más abajo.
              ⚠ CONFIRMAR con el estudio qué materias excluir además de penal. -->
         <div class="alcance">
           <h3 class="alcance__titulo">Hasta dónde llegamos</h3>
           <p class="alcance__texto">
             Trabajamos tránsito y derecho civil, y nada más. No tomamos causas
-            penales ni laborales: preferimos decírtelo de entrada antes que
-            hacerte perder una consulta.
+            penales ni laborales: preferimos decírselo de entrada antes que
+            hacerle perder una consulta.
           </p>
           <p class="alcance__nota">
-            Si tu tema no es de los nuestros, escribinos igual: si podemos, te
+            Si su tema no es de los nuestros, escríbanos igual: si podemos, lo
             orientamos hacia dónde ir.
           </p>
         </div>
       </div>
 
-      <!-- El estudio no usa fotos propias ni de la oficina. En lugar del
-           retrato, esta columna hace visible la cobertura por localidad:
-           es lo que más aporta al SEO local del sitio. -->
+      <!-- El estudio sigue sin usar fotos propias ni de la oficina: la ficha
+           del profesional va sin retrato. Esta columna hace visible la
+           cobertura por localidad, que es lo que más aporta al SEO local. -->
       <aside class="cobertura" aria-labelledby="cobertura-titulo">
         <h3 class="cobertura__titulo" id="cobertura-titulo">Dónde atendemos</h3>
         <p class="cobertura__nota">
@@ -857,6 +927,62 @@
       </aside>
 
     </div>
+
+    <!-- ──────────────────────────────────────────────────────────────────
+         PROFESIONALES (punto 3 del informe)
+         Sólo se publica a quien tenga la aparición pública autorizada. Para
+         sumar otro abogado: copiar un <article class="profesional"> entero.
+         Sin retratos, por decisión del Estudio.
+         ────────────────────────────────────────────────────────────── -->
+    <div class="contenedor">
+      <div class="profesionales">
+        <h3 class="profesionales__titulo" id="profesionales-titulo">Quién lo atiende</h3>
+
+        <article class="profesional" aria-labelledby="prof-arfuch">
+          <header class="profesional__encabezado">
+            <h4 class="profesional__nombre" id="prof-arfuch">Luis Claudio Arfuch Castillo</h4>
+            <p class="profesional__condicion">Abogado</p>
+          </header>
+
+          <dl class="profesional__datos">
+            <div>
+              <dt>Colegio</dt>
+              <dd>Colegio de Abogados de La Plata (CALP)</dd>
+            </div>
+            <div>
+              <dt>Matrícula</dt>
+              <dd>T° LXIV – F° 107</dd>
+            </div>
+            <div>
+              <dt>Áreas principales</dt>
+              <dd>Derecho Administrativo · Justicia de Faltas</dd>
+            </div>
+          </dl>
+
+          <div class="profesional__trayectoria">
+            <p>
+              Integrante de Arfuch Castillo &amp; Asociados, con especial
+              dedicación al Derecho Administrativo, faltas y tránsito, acciones
+              de amparo, responsabilidad civil y conflictos vinculados con
+              licencias de conducir.
+            </p>
+            <p>
+              Su práctica comprende la representación y el asesoramiento en
+              multas y fotomultas, procedimientos ante Juzgados de Faltas,
+              recursos administrativos y judiciales, conflictos por renovación y
+              recuperación de licencias de conducir, acciones de amparo contra
+              organismos públicos, accidentes de tránsito y reclamaciones
+              indemnizatorias.
+            </p>
+            <p>
+              Ha intervenido en procesos judiciales y administrativos ante
+              municipios y organismos de la Provincia de Buenos Aires.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
   </section>
 
 
@@ -872,10 +998,10 @@
 
       <header class="llamada__encabezado">
         <p class="ante-titulo">La primera llamada</p>
-        <h2 class="llamada__titulo" id="llamada-titulo">Lo que te vamos a preguntar</h2>
+        <h2 class="llamada__titulo" id="llamada-titulo">Lo que le vamos a preguntar</h2>
         <p class="llamada__nota">
-          Para que sepas de antemano cómo es la consulta. Son seis preguntas, y
-          probablemente ya tengas todas las respuestas.
+          Para que sepa de antemano cómo es la consulta. Son seis preguntas, y
+          probablemente ya tenga todas las respuestas.
         </p>
       </header>
 
@@ -887,13 +1013,13 @@
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">02</p>
-          <h3 class="consulta__pregunta">¿Qué documentación tenés?</h3>
+          <h3 class="consulta__pregunta">¿Qué documentación tiene?</h3>
           <p class="consulta__nota">El acta, la notificación, la constancia del accidente o el contrato.</p>
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">03</p>
-          <h3 class="consulta__pregunta">¿Realizaste alguna gestión?</h3>
-          <p class="consulta__nota">Si pagaste, firmaste o presentaste algo, el camino cambia.</p>
+          <h3 class="consulta__pregunta">¿Realizó alguna gestión?</h3>
+          <p class="consulta__nota">Si pagó, firmó o presentó algo, el camino cambia.</p>
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">04</p>
@@ -907,14 +1033,14 @@
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">06</p>
-          <h3 class="consulta__pregunta">¿Qué resultado esperás?</h3>
-          <p class="consulta__nota">No siempre es posible, pero saber qué esperás ordena la estrategia.</p>
+          <h3 class="consulta__pregunta">¿Qué resultado espera?</h3>
+          <p class="consulta__nota">No siempre es posible, pero saber qué espera ordena la estrategia.</p>
         </li>
       </ol>
 
       <p class="llamada__cierre">
-        Si tenés estas respuestas, la llamada lleva unos minutos. Y si no las
-        tenés, llamá igual: las vamos viendo juntos.
+        Si tiene estas respuestas, la llamada lleva unos minutos. Y si no las
+        tiene, llame igual: las vamos viendo juntos.
       </p>
 
     </div>
@@ -929,11 +1055,11 @@
 
       <div class="contacto__llamado">
         <h2 class="contacto__titulo" id="contacto-titulo">
-          Llamanos o escribinos. Te respondemos hoy.
+          Llámenos o escríbanos. Le respondemos a la brevedad.
         </h2>
         <p class="contacto__nota">
-          Contanos tu problema y te decimos qué se puede hacer. La primera
-          conversación no te compromete a nada.
+          Cuéntenos su problema y le decimos qué se puede hacer. La primera
+          conversación no lo compromete a nada.
         </p>
 
         <div class="contacto__acciones">
@@ -950,7 +1076,7 @@
               <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
               <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
             </svg>
-            Escribinos por WhatsApp
+            Escríbanos por WhatsApp
           </a>
         </div>
       </div>
@@ -1027,9 +1153,11 @@
     </div>
 
     <nav class="pie__enlaces" aria-label="Casos">
-      <a href="#caso-multas">Multas y fotomultas</a>
-      <a href="#caso-accidentes">Accidentes de tránsito</a>
-      <a href="#caso-carnet">Licencia de conducir</a>
+      <a href="multas-fotomultas-provincia-buenos-aires/">Multas y fotomultas</a>
+      <a href="descargo-multas-transito/">Descargos de multas</a>
+      <a href="problemas-renovacion-licencia-conducir/">Licencia de conducir</a>
+      <a href="amparo-licencia-conducir/">Amparos por licencia</a>
+      <a href="abogado-accidentes-transito/">Accidentes de tránsito</a>
       <a href="#caso-civil">Derecho civil</a>
       <a href="#estudio">El estudio</a>
     </nav>
@@ -1046,7 +1174,7 @@
       <!-- El año queda escrito acá como respaldo: si el JS no corre se ve
            igual y nunca queda vacío. main.js lo actualiza al año en curso. -->
       <p>© <span data-anio>2026</span> Arfuch Castillo &amp; Asoc.</p>
-      <address>Calle 13 B N° 908 — City Bell, La Plata, Buenos Aires.</address>
+      <address>Calle 13 B N° 908 — City Bell, La Plata, Provincia de Buenos Aires.</address>
       <p class="pie__credito">
         Diseño y desarrollo:
         <a href="https://leandroheffes.com" target="_blank" rel="noopener">Leandro Heffes</a>
@@ -1055,27 +1183,28 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════════════════════════════════
-     BOTONES FLOTANTES
-     ══════════════════════════════════════════════════════════════════ -->
-<div class="flotantes" id="flotantes" aria-label="Contacto rápido">
-  <a class="flotante flotante--tel" href="tel:+5492215756941" data-evento="tel-flotante"
-     aria-label="Llamar al estudio: 2215 75-6941">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
-    </svg>
-    <span class="flotante__etiqueta">Llamar</span>
-  </a>
-
-  <a class="flotante flotante--wa"
-     href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre..."
-     target="_blank" rel="noopener" data-evento="wa-flotante"
-     aria-label="Escribir al estudio por WhatsApp">
+<!-- ══════════════════════════════════════════════════════════════════
+     CONTACTO PERMANENTE (punto 10 del informe)
+     WhatsApp visible desde el primer momento, no después de hacer scroll.
+     En móvil es una barra inferior fija; en escritorio, botones flotantes.
+     ══════════════════════════════════════════════════════════════ -->
+<div class="contacto-fijo" aria-label="Contacto rápido">
+  <a class="contacto-fijo__wa"
+     href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20hacer%20una%20consulta."
+     target="_blank" rel="noopener" data-evento="wa-barra-fija">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
       <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
     </svg>
-    <span class="flotante__etiqueta">WhatsApp</span>
+    <span>Consultar por WhatsApp</span>
+  </a>
+
+  <a class="contacto-fijo__tel" href="tel:+5492215756941" data-evento="tel-barra-fija"
+     aria-label="Llamar al estudio: 2215 75-6941">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
+    </svg>
+    <span class="contacto-fijo__etiqueta">Llamar</span>
   </a>
 </div>
 
@@ -1088,58 +1217,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Puedo impugnar una fotomulta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En muchos casos sí. Las actas y las fotomultas tienen que cumplir requisitos formales, y cuando falta alguno o hay errores en los datos, la infracción puede cuestionarse. También hay plazos que conviene no dejar vencer."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Me conviene pagarla con descuento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A veces sí y a veces no: pagar implica reconocer la infracción y eso suma antecedentes. Lo vemos caso por caso antes de que tomes la decisión."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Y si la culpa fue compartida?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Igual puede haber reclamo. La responsabilidad se puede repartir en proporciones y eso se discute con la prueba que haya: fotos, testigos y la constancia policial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Pasó hace meses, ¿todavía puedo reclamar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Probablemente sí, pero los reclamos tienen plazos y conviene no dejarlos correr. Contanos cuándo fue y te decimos en qué situación estás."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Está vencido hace muchos años, ¿tengo que hacer todo de nuevo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de cuánto tiempo pasó y de la jurisdicción que lo emitió. En algunos casos se renueva y en otros hay que rehacer parte del trámite. Lo verificamos antes de que pierdas un día en la oficina."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Tengo multas impagas, ¿puedo renovar igual?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Las infracciones impagas suelen trabar el trámite. Lo primero es ver si esas multas son válidas: a veces se resuelven impugnándolas y no pagándolas."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "¿Se puede resolver sin llegar a juicio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Muchas veces sí, y suele convenir: es más rápido y más barato. Antes de demandar se puede intentar un reclamo formal o una negociación. Si no prospera, seguimos por la vía judicial."
+        "text": "En muchos casos sí, y suele convenir: por lo general resulta más rápido y menos costoso. Antes de demandar puede intentarse un reclamo formal o una negociación, y si no prospera se continúa por la vía judicial."
       }
     },
     {
@@ -1147,7 +1228,7 @@
       "name": "No tengo contrato firmado, ¿igual puedo reclamar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En muchos casos sí. Los mensajes, transferencias, facturas y testigos también sirven como prueba. Traé lo que tengas y lo evaluamos."
+        "text": "En muchos casos sí. Los mensajes, transferencias, facturas y testigos pueden tener valor probatorio, según las circunstancias. Traiga lo que tenga y lo evaluamos."
       }
     }
   ]

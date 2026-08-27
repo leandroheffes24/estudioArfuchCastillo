@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mapa del sitio. Al agregar una pagina nueva hay que sumarla aca
+     y volver a enviarlo desde Google Search Console. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://arfuchcastillo.com.ar/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://arfuchcastillo.com.ar/multas-fotomultas-provincia-buenos-aires/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://arfuchcastillo.com.ar/problemas-renovacion-licencia-conducir/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://arfuchcastillo.com.ar/abogado-accidentes-transito/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://arfuchcastillo.com.ar/descargo-multas-transito/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arfuchcastillo.com.ar/amparo-licencia-conducir/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>

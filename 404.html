@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Página 404 (punto 15 del informe). Vercel la sirve automáticamente
+     para cualquier ruta que no exista. Reutiliza la hoja de estilos del
+     sitio, así que no hay nada que mantener por separado salvo el texto.
+     ⚠ Al agregar un área nueva, sumarla también a la lista de abajo. -->
+
+<title>Página no encontrada — Arfuch Castillo &amp; Asoc.</title>
+<meta name="robots" content="noindex, follow">
+
+<meta name="theme-color" content="#12253F">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+  /* La 404 no tiene barra ni pie: se centra en la ventana y ofrece las dos
+     salidas que importan, volver al inicio o consultar directamente.
+     ⚠ La clase se llama `pagina-error` y NO `error`: `.error` ya existe en la
+     hoja del sitio, para cada ítem de "Errores que conviene evitar", y es una
+     grilla de dos columnas que le partía el orden de lectura a esta página. */
+  .pagina-error {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    gap: var(--e-2);
+    min-height: 100svh;
+    padding-block: var(--e-6);
+  }
+  .pagina-error__codigo {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 2rem + 7vw, 7rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--acento);
+  }
+  .pagina-error__titulo { max-width: 18ch; }
+  .pagina-error__texto {
+    max-width: 52ch;
+    font-size: var(--t-lead);
+    line-height: 1.6;
+    color: var(--tinta-suave);
+  }
+  .pagina-error__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .875rem;
+    margin-top: var(--e-2);
+  }
+  .pagina-error__areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.25rem;
+    margin-top: var(--e-3);
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--linea);
+    font-size: var(--t-menor);
+  }
+  .pagina-error__areas a { color: var(--acento); text-decoration: none; }
+  .pagina-error__areas a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  body { padding-bottom: 0; }
+</style>
+</head>
+
+<body>
+
+<main class="contenedor pagina-error">
+  <p class="pagina-error__codigo">404</p>
+  <h1 class="pagina-error__titulo">Esta página no existe</h1>
+  <p class="pagina-error__texto">
+    Puede que el enlace esté mal escrito o que la página haya cambiado de
+    dirección. Si necesita hacer una consulta, llámenos o escríbanos y lo
+    resolvemos por ahí.
+  </p>
+
+  <div class="pagina-error__acciones">
+    <a class="boton boton--principal boton--grande" href="/">
+      Volver al inicio
+    </a>
+    <a class="boton boton--secundario boton--grande" href="tel:+5492215756941" data-evento="tel-404">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
+      </svg>
+      Llamar al 2215 75-6941
+    </a>
+  </div>
+
+  <nav class="pagina-error__areas" aria-label="Áreas del estudio">
+    <a href="/multas-fotomultas-provincia-buenos-aires/">Multas y fotomultas</a>
+    <a href="/descargo-multas-transito/">Descargos de multas</a>
+    <a href="/problemas-renovacion-licencia-conducir/">Licencia de conducir</a>
+    <a href="/amparo-licencia-conducir/">Amparos por licencia</a>
+    <a href="/abogado-accidentes-transito/">Accidentes de tránsito</a>
+    <a href="/#caso-civil">Derecho civil</a>
+    <a href="/#contacto">Contacto</a>
+  </nav>
+</main>
+
+</body>
+</html>
