@@ -178,7 +178,6 @@
       '.casos-indice__encabezado, .casos-indice__lista > li',
       '.caso',
       '.errores__encabezado, .error, .errores__cierre',
-      '.situaciones__encabezado, .situacion, .situaciones__cierre',
       '.estudio__texto > *, .cobertura',
       '.llamada__encabezado, .consulta, .llamada__cierre',
       '.contacto__llamado, .contacto__datos, .contacto .mapa',
