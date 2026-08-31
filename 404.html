@@ -67,6 +67,20 @@
   .pagina-error__areas a { color: var(--acento); text-decoration: none; }
   .pagina-error__areas a:hover { text-decoration: underline; text-underline-offset: 4px; }
   body { padding-bottom: 0; }
+  /* Mismo cuerpo que el aviso del pie (10 px), con el color oscuro que
+     corresponde al fondo claro de esta página: 6,24:1, sobre el 4,5:1
+     que pide WCAG para texto normal. */
+  .pagina-error__aviso {
+    max-width: 100ch;
+    margin-top: var(--e-4);
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--linea);
+    font-size: 0.625rem;
+    line-height: 1.75;
+    letter-spacing: .015em;
+    color: var(--tinta-suave);
+    text-wrap: pretty;
+  }
 </style>
 </head>
 
@@ -89,7 +103,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
       </svg>
-      Llamar al 2215 75-6941
+      Contactar al estudio
     </a>
   </div>
 
@@ -102,6 +116,18 @@
     <a href="/#caso-civil">Derecho civil</a>
     <a href="/#contacto">Contacto</a>
   </nav>
+
+  <!-- Aviso legal: el Estudio pidió que sea texto fijo en TODAS las URLs, y
+       esta página no tiene pie, así que va acá con el color del fondo claro. -->
+  <p class="pagina-error__aviso">
+    La información contenida en este sitio tiene carácter general e informativo
+    y no constituye asesoramiento jurídico respecto de un caso particular. Cada
+    situación requiere el análisis individual de sus antecedentes y
+    documentación. Los resultados y plazos de cualquier actuación administrativa
+    o judicial dependen de las circunstancias particulares del caso y de las
+    autoridades intervinientes.
+  </p>
+
 </main>
 
 </body>

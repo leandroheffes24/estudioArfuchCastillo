@@ -24,27 +24,62 @@
         contacto, el enlace "Cómo llegar", el mapa diferido y el pie.
 
      ╔═════════════════════════════════════════════════════════════╗
-     ║  CRITERIO DEONTOLÓGICO — LEER ANTES DE AGREGAR TEXTO O CAMPAÑAS      ║
+     ║  REGLA PERMANENTE — LEER ANTES DE AGREGAR O EDITAR CUALQUIER TEXTO   ║
+     ║  Rige también para campañas, landing pages, banners y publicaciones   ║
+     ║  conectadas a esta web.                                              ║
      ╚═════════════════════════════════════════════════════════════╝
 
-     El sitio se mantiene deliberadamente sobrio por las normas éticas del
-     ejercicio profesional. NO se incorporan:
+     La Ley 5.177 de la Provincia de Buenos Aires admite identificar, además
+     del nombre, domicilio, títulos y horarios, el FUERO, la MATERIA o los
+     ASUNTOS a los que el abogado se dedica especialmente. Nombrar las áreas
+     no es el problema; la forma de presentarlas sí.
 
-        · promociones ni descuentos          · comparaciones con otros estudios
-        · resultados garantizados            · afirmaciones de superioridad
-        · testimonios sin revisión previa    · mensajes agresivos de captación
-        · expresiones comerciales impropias de un estudio jurídico
+     NO INCORPORAR, EN NINGUNA VERSIÓN FUTURA:
 
-     Tampoco va `priceRange` en el JSON-LD: Google lo muestra como banda de
-     precio junto al negocio y no corresponde a un estudio jurídico.
+       1. Promesas de éxito o resultado: "le anulamos la multa", "recuperamos
+          su licencia", "ganamos su amparo", "cobrará X", "resultado
+          garantizado".
+       2. Promesas de plazo: "en 48 horas", "en 7 días", "solución inmediata".
+          → EXCEPCIÓN: sí puede describirse objetivamente un PLAZO LEGAL,
+            siempre que quede claro que no es un plazo de resultado
+            profesional. Es lo que hace hoy el sitio: habla de plazos
+            perentorios del procedimiento y repite que el tiempo de
+            resolución no puede anticiparse.
+       3. Porcentajes o estadísticas de éxito con fin promocional:
+          "95 % de casos ganados", "más de 500 multas anuladas".
+       4. Testimonios de clientes que describan resultados de asuntos
+          concretos, montos indemnizatorios, sentencias favorables o multas
+          eliminadas.
+       5. Comparaciones o descalificaciones: "otros abogados no saben",
+          "desconfíe de…", "las aseguradoras siempre pagan menos", "los
+          municipios actúan ilegalmente".
+       6. Autoelogio: "expertos", "especialistas", "líderes", "los mejores",
+          "número 1" — salvo título formal efectivamente acreditado y usado
+          de manera estrictamente objetiva.
+       7. Banners de urgencia comercial sin plazo real del expediente:
+          temporizadores, "última oportunidad", "hoy solamente", "no pierda
+          su derecho".
+       8. Escritos, expedientes, fotografías, nombres o detalles
+          identificables de clientes y casos en trámite como material
+          promocional.
 
-     Las afirmaciones jurídicas van en términos que el Estudio pueda defender:
-     "puede corresponder", "en determinados casos", "según las circunstancias",
-     "debe analizarse". Evitar "siempre", "nunca", "garantizamos", "seguro que".
+     Tampoco `priceRange`, `offers`, `aggregateRating` ni `review` en el
+     JSON-LD: Google los muestra como señales comerciales del negocio.
 
-     ⚠ Antes de incorporar publicidad paga o campañas, revisar el criterio
-       vigente del COLEGIO DE ABOGADOS DE LA PLATA en materia de publicidad y
-       captación profesional.
+     CÓMO SE REDACTA:
+       · Afirmaciones jurídicas en términos defendibles: "puede corresponder",
+         "en determinados casos", "según las circunstancias", "debe analizarse".
+         Evitar "siempre", "nunca", "garantizamos", "seguro que".
+       · Advertencias en forma objetiva, nunca alarmista.
+       · Llamados a la acción — sólo estos cuatro, neutros y repetibles:
+         "Solicitar una consulta", "Enviar documentación", "Consultar el caso",
+         "Contactar al estudio".
+       · El sitio explica LA MATERIA, no lo que hace el estudio.
+
+     ⚠ Antes de publicidad paga o campañas, revisar el criterio vigente del
+       COLEGIO DE ABOGADOS DE LA PLATA.
+     ⚠ Las IMÁGENES también cuentan: revisar que no lleven texto incrustado
+       con plazos, montos o datos que contradigan estas reglas.
 
      DOMINIO — ya cargado: arfuchcastillo.com.ar
         Aparece en 4 lugares del <head>: canonical, og:url, og:image y el
@@ -330,10 +365,14 @@
   ],
   "availableLanguage": "Spanish",
   "knowsAbout": [
-    "Multas de tránsito",
-    "Fotomultas",
-    "Renovación del carnet de conducir",
+    "Derecho Administrativo",
+    "Justicia de Faltas",
+    "Multas y fotomultas",
+    "Descargos y recursos administrativos",
+    "Licencias de conducir",
+    "Acciones de amparo",
     "Accidentes de tránsito",
+    "Responsabilidad civil",
     "Derecho civil"
   ],
   "employee": {
@@ -427,7 +466,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
         </svg>
-        Llamar al 2215 75-6941
+        Contactar al estudio
       </a>
     </div>
   </nav>
@@ -462,7 +501,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
           </svg>
-          Llamar al 2215 75-6941
+          Solicitar una consulta
         </a>
         <a class="boton boton--claro boton--grande"
            href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre..."
@@ -471,7 +510,7 @@
             <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
             <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
           </svg>
-          Consultar por WhatsApp
+          Contactar al estudio
         </a>
       </div>
     </div>
@@ -503,7 +542,7 @@
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">01</span>
               <span class="acceso__titulo">Multas y fotomultas</span>
-              <span class="acceso__nota">Consulte su situación antes de pagar.</span>
+              <span class="acceso__nota">Información y análisis de infracciones y fotomultas.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -519,7 +558,7 @@
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">02</span>
               <span class="acceso__titulo">Accidentes de tránsito</span>
-              <span class="acceso__nota">Envíenos los datos del accidente para evaluar el reclamo.</span>
+              <span class="acceso__nota">Información sobre accidentes de tránsito y reclamos indemnizatorios.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -535,7 +574,7 @@
             <span class="acceso__cuerpo">
               <span class="acceso__numero" aria-hidden="true">03</span>
               <span class="acceso__titulo">Licencia de conducir</span>
-              <span class="acceso__nota">Cuéntenos por qué no puede renovar su licencia.</span>
+              <span class="acceso__nota">Problemas de renovación, categorías y vías de revisión de la licencia.</span>
             </span>
             <svg class="acceso__flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -635,7 +674,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
               </svg>
-              Llamar por mi caso
+              Solicitar una consulta
             </a>
             <a class="boton boton--secundario"
                href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre%20un%20asunto%20civil."
@@ -644,7 +683,7 @@
                 <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
                 <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
               </svg>
-              Enviar los papeles por WhatsApp
+              Enviar documentación
             </a>
           </div>
         </article>
@@ -684,7 +723,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Revísela antes. El pago de una infracción puede limitar considerablemente las posibilidades posteriores de cuestionamiento, por lo que resulta conveniente analizar la situación antes de efectuarlo.
+              Conviene revisarla previamente. El pago de una infracción puede limitar considerablemente las posibilidades posteriores de cuestionamiento, por lo que resulta conveniente analizar la situación antes de efectuarlo.
             </p>
           </div>
         </li>
@@ -697,7 +736,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Averigüe primero qué se puede reclamar. La primera propuesta suele cubrir el arreglo del auto y dejar afuera las lesiones y sus consecuencias. Firmar un acuerdo puede cerrar la posibilidad de reclamar más adelante.
+              Conviene establecer previamente qué conceptos pueden reclamarse. Una propuesta indemnizatoria puede comprender sólo algunos conceptos. Antes de aceptar un acuerdo conviene verificar qué daños contempla, cuáles excluye y qué efectos produce su firma sobre reclamos posteriores.
             </p>
           </div>
         </li>
@@ -710,8 +749,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Fíjese antes si tiene infracciones impagas o una inhabilitación.
-              Si las hay, el trámite suele frenarse en el mostrador. Conviene verificarlo de antemano.
+              Conviene verificar previamente la existencia de infracciones impagas o inhabilitaciones, que pueden operar como impedimento para el trámite.
             </p>
           </div>
         </li>
@@ -724,7 +762,7 @@
           <div class="error__bien">
             <p class="error__rotulo">En su lugar</p>
             <p class="error__texto">
-              Guarde todo: WhatsApp, mails, transferencias y facturas. En un asunto civil eso puede tener valor probatorio, y en muchos casos es lo único disponible cuando no se firmó un contrato.
+              Conviene conservar los intercambios: mensajes, correos, transferencias y facturas. En un asunto civil eso puede tener valor probatorio, y en muchos casos es lo único disponible cuando no se firmó un contrato.
             </p>
           </div>
         </li>
@@ -732,9 +770,8 @@
       </ol>
 
       <p class="errores__cierre">
-        Si ya tomó alguna de estas decisiones, todavía puede haber margen:
-        cambia el camino, no necesariamente el resultado.
-        <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-errores">Llámenos al 2215 75-6941</a>.
+        Si alguna de estas decisiones ya fue adoptada, las alternativas disponibles dependerán de sus efectos y del estado del trámite. Para un análisis particular puede
+        <a class="enlace-tel" href="tel:+5492215756941" data-evento="tel-errores">solicitar una consulta al estudio</a>.
       </p>
 
     </div>
@@ -899,7 +936,7 @@
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">01</p>
           <h3 class="consulta__pregunta">¿Cuándo ocurrió y cómo fue?</h3>
-          <p class="consulta__nota">La fecha importa: casi todos estos trámites tienen plazos que corren.</p>
+          <p class="consulta__nota">La fecha incide: la mayoría de estos trámites están sujetos a plazos.</p>
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">02</p>
@@ -919,7 +956,7 @@
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">05</p>
           <h3 class="consulta__pregunta">¿Hay algún plazo por vencer?</h3>
-          <p class="consulta__nota">Una notificación con plazo, una audiencia o un trámite próximo a caducar.</p>
+          <p class="consulta__nota">Una notificación con plazo, una audiencia o un trámite en curso.</p>
         </li>
         <li class="consulta">
           <p class="consulta__ordinal" aria-hidden="true">06</p>
@@ -945,10 +982,10 @@
 
       <div class="contacto__llamado">
         <h2 class="contacto__titulo" id="contacto-titulo">
-          Llámenos o escríbanos. Le respondemos a la brevedad.
+          Solicitar una consulta
         </h2>
         <p class="contacto__nota">
-          Cuéntenos su consulta. La primera conversación no lo compromete a nada.
+          Para analizar una situación concreta puede contactarse con el estudio y remitir la documentación disponible.
         </p>
 
         <div class="contacto__acciones">
@@ -956,7 +993,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M6.5 3h2.2l1.6 4-2 1.3a12.5 12.5 0 0 0 5.4 5.4l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"></path>
             </svg>
-            Llamar al 2215 75-6941
+            Solicitar una consulta
           </a>
           <a class="boton boton--contorno-claro boton--grande"
              href="https://wa.me/5492215756941?text=Hola%2C%20quiero%20consultar%20sobre..."
@@ -965,7 +1002,7 @@
               <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
               <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
             </svg>
-            Escríbanos por WhatsApp
+            Enviar documentación
           </a>
         </div>
       </div>
@@ -1058,6 +1095,22 @@
     </div>
   </div>
 
+
+  <!-- Aviso legal (pedido del Estudio). Texto fijo en todas las URLs, nunca
+       dentro de un modal ni plegado. -->
+  <div class="pie__aviso">
+    <div class="contenedor">
+      <p>
+        La información contenida en este sitio tiene carácter general e
+        informativo y no constituye asesoramiento jurídico respecto de un caso
+        particular. Cada situación requiere el análisis individual de sus
+        antecedentes y documentación. Los resultados y plazos de cualquier
+        actuación administrativa o judicial dependen de las circunstancias
+        particulares del caso y de las autoridades intervinientes.
+      </p>
+    </div>
+  </div>
+
   <div class="pie__base">
     <div class="contenedor pie__base-interior">
       <!-- El año queda escrito acá como respaldo: si el JS no corre se ve
@@ -1085,7 +1138,7 @@
       <path d="M3.5 20.5l1.3-4.2A8.2 8.2 0 1 1 8 19.3l-4.5 1.2z"></path>
       <path d="M9 9.2c.2 1 .7 2 1.5 2.8.8.8 1.8 1.3 2.8 1.5l1-1.2 1.9.9v1.3c0 .5-.5 1-1.1.9a7.6 7.6 0 0 1-6.2-6.2c-.1-.6.4-1.1.9-1.1h1.3l.9 1.9-1 1.2z"></path>
     </svg>
-    <span>Consultar por WhatsApp</span>
+    <span>Contactar al estudio</span>
   </a>
 
   <a class="contacto-fijo__tel" href="tel:+5492215756941" data-evento="tel-barra-fija"

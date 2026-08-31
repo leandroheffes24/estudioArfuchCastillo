@@ -1328,6 +1328,24 @@ p { text-wrap: pretty; }
 .pie__contacto a:focus-visible { outline-color: var(--acento-claro); }
 .pie__tel { font-weight: 700; color: var(--fondo); }
 
+/* Aviso legal del pie. El Estudio pidió cuerpo menor —9 a 10 px
+   equivalentes— con la condición de que conserve legibilidad. Se usan 10 px,
+   el tope del rango, y se compensa el tamaño donde sí hay margen: contraste
+   10,5:1 sobre el navy del pie —muy por encima del 4,5:1 que pide WCAG para
+   texto normal—, interlineado 1.75, un toque de letter-spacing (que es lo que
+   sostiene la legibilidad en cuerpos chicos) y ancho de línea acotado.
+   Es texto fijo: no va en un modal ni plegado. */
+.pie__aviso { border-top: 1px solid var(--linea-clara); }
+.pie__aviso p {
+  max-width: 100ch;
+  padding-block: 1.125rem;
+  font-size: 0.625rem;
+  line-height: 1.75;
+  letter-spacing: .015em;
+  color: rgba(252, 252, 251, .82);
+  text-wrap: pretty;
+}
+
 .pie__base { border-top: 1px solid var(--linea-clara); }
 .pie__base-interior {
   display: flex;
