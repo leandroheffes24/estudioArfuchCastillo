@@ -861,17 +861,6 @@ p { text-wrap: pretty; }
 
 .error__mal { display: grid; gap: .5rem; }
 
-.error__etiqueta {
-  justify-self: start;
-  padding: .1875rem .5rem;
-  border: 1px solid var(--linea-fuerte);
-  border-radius: 2px;
-  font-size: var(--t-micro);
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--tinta-suave);
-}
 
 /* El tachado es el gesto de la sección: se lee antes que el texto. */
 .error__frase {
@@ -879,10 +868,7 @@ p { text-wrap: pretty; }
   font-size: clamp(1.125rem, 1.02rem + 0.5vw, 1.4375rem);
   font-weight: 600;
   line-height: 1.35;
-  color: var(--tinta-suave);
-  text-decoration: line-through;
-  text-decoration-color: var(--linea-fuerte);
-  text-decoration-thickness: 2px;
+  color: var(--tinta);
   text-wrap: pretty;
 }
 
@@ -1714,6 +1700,27 @@ body { padding-bottom: 5.25rem; }
   flex-wrap: wrap;
   gap: .875rem;
   margin-top: var(--e-3);
+}
+
+/* Nota de confidencialidad. Acompaña a las zonas donde se pide documentación,
+   que puede incluir DNI, actas, historias clínicas o sentencias. Cuerpo menor
+   que el texto corriente pero con contraste holgado: es información que el
+   visitante necesita ANTES de enviar nada. */
+.nota-confidencial {
+  max-width: 64ch;
+  margin-top: var(--e-2);
+  padding-left: .875rem;
+  border-left: 2px solid var(--linea-fuerte);
+  font-size: var(--t-micro);
+  line-height: 1.7;
+  color: var(--tinta-suave);
+  text-wrap: pretty;
+}
+
+/* Sobre el navy profundo de la sección de contacto. */
+.contacto .nota-confidencial {
+  border-left-color: var(--linea-clara);
+  color: rgba(252, 252, 251, .78);
 }
 
 .cierre-area__rotulo {
